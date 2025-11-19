@@ -1,5 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
 import dotenv from 'dotenv';
+import cors from "cors";
 import dbConnection from './config/database';
 import helmet from 'helmet';
 import mongoSanitize from 'express-mongo-sanitize';
@@ -12,6 +13,7 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
+app.use(cors());
 dotenv.config();
 dbConnection();
 
