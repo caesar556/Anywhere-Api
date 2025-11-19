@@ -21,7 +21,7 @@ app.use((0, helmet_1.default)());
 app.use('/quiz', quiz_1.quizRouter);
 app.use('/announcement', announcement_1.announcementRouter);
 app.use(globalError_1.default);
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
+//app.listen(port, () => {
+// console.log(`Server running on port ${port}`);
+//});
 exports.default = app;

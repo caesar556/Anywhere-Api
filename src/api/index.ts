@@ -1,8 +1,8 @@
-import app from "../index";
+import app from "../config/database";
 import dbConnection from "../config/database";
-import express, { Request, Response } from "express";
 
 let isConnected = false;
+
 async function connectDB() {
   if (!isConnected) {
     await dbConnection();
@@ -10,7 +10,7 @@ async function connectDB() {
   }
 }
 
-export default async function handler(req: Request, res: Response) {
+export default async function handler(req, res) {
   await connectDB();
   return app(req, res);
 }
