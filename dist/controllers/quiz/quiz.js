@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteQuiz = exports.updateQuiz = exports.getSingleQuiz = exports.getAllQuiz = exports.createQuiz = void 0;
+const factoryController_1 = require("../factory/factoryController");
+const quiz_1 = require("../../models/quiz");
+exports.createQuiz = (0, factoryController_1.createDoc)(quiz_1.Quiz);
+exports.getAllQuiz = (0, factoryController_1.getAllDocs)(quiz_1.Quiz);
+exports.getSingleQuiz = (0, factoryController_1.getSingleDoc)(quiz_1.Quiz);
+exports.updateQuiz = (0, factoryController_1.updateDoc)(quiz_1.Quiz);
+exports.deleteQuiz = (0, factoryController_1.deleteDoc)(quiz_1.Quiz);

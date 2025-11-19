@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteAnnouncement = exports.updateAnnouncement = exports.getSingleAnnouncement = exports.getAllAnnouncement = exports.createAnnouncement = void 0;
+const announcement_1 = require("../../models/announcement");
+const factoryController_1 = require("../factory/factoryController");
+exports.createAnnouncement = (0, factoryController_1.createDoc)(announcement_1.Announcement);
+exports.getAllAnnouncement = (0, factoryController_1.getAllDocs)(announcement_1.Announcement);
+exports.getSingleAnnouncement = (0, factoryController_1.getSingleDoc)(announcement_1.Announcement);
+exports.updateAnnouncement = (0, factoryController_1.updateDoc)(announcement_1.Announcement);
+exports.deleteAnnouncement = (0, factoryController_1.deleteDoc)(announcement_1.Announcement);
