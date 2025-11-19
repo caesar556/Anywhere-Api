@@ -20,6 +20,14 @@ dbConnection();
 app.use(express.json({ limit: '10kb' }));
 app.use(helmet());
 
+app.use((req: Request , res: Response , next: NextFunction) => {
+  console.table({
+    path: req.url,
+    method: req.method
+  })
+  next();
+})
+
 
 app.use('/quiz', quizRouter);
 app.use('/announcement', announcementRouter);
