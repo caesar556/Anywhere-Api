@@ -12,5 +12,6 @@ async function connectDB() {
 
 export default async function handler(req, res) {
   await connectDB();
+  console.log("hello from vercl");
   return app(req, res);
 }
